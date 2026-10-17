@@ -25,7 +25,7 @@ Corrections, additions and new sources are welcome. Please open an issue or pull
 
 ## Live timeline
 
-Interactive web timeline: https://swecha-foundation.github.io/swecha-history/
+Interactive web timeline: https://rajasekharponakala.github.io/swecha-history/
 
 ## License
 
