@@ -23,6 +23,10 @@ See [`timeline/sources.md`](timeline/sources.md) for the full list.
 
 Corrections, additions and new sources are welcome. Please open an issue or pull request. Dates are only recorded where a public source states them; inferred dates are clearly marked.
 
+## Live timeline
+
+Interactive web timeline: https://swecha-foundation.github.io/swecha-history/
+
 ## License
 
 Content is compiled from publicly available sources for educational and archival purposes. Original sources retain their own licenses.
