@@ -137,6 +137,20 @@ A chronological, source-backed timeline of the Swecha organisation and its proje
 - **Swecha AI OS** direction: builds on Swecha OS, BalaSwecha and E-Swecha to deliver a next-generation open-source OS with AI capabilities at its core (Debian-based live-build). Repository created 31 July 2020.
   - Source: [code.swecha.org/debian/swecha-os](https://code.swecha.org/debian/swecha-os)
 
+## FSMI and public policy milestones
+
+- **2010-03-21 — FSMI formed.** Free Software Movement of India announced at the valedictory of the National Free Software Conference 2010, Bangalore. Swecha is a member organisation.
+- **2010 — NCAR 2010** hosted by FSMI; A. P. J. Abdul Kalam inaugurated.
+- **2011-12 — NCAR 2011** hosted by FSMI; Kalam urged extending the free-software community model to research.
+- **2012-06-09 — Internet Freedom protest** called by FSMI; police scuttled Hyderabad protest; activists including Y. Kiran Chandra taken into custody.
+- **2013 — AICTE rescinds Microsoft Office 365 mandate** after intervention by groups led by FSMI.
+- **2014-01 — Swecha policy demands:** hardware manufacturing, data centres, software design centres; critique of IT Act Section 66A protests.
+- **2015-06 — Airtel 3G script injection** criticised by FSMI.
+- **2015-09 — Software patents / Computer Related Inventions** guidelines opposed by FSMI.
+- **2014-01 — Surveillance seminars** (Richard Stallman, Neville Roy Singham) organised by Swecha.
+
+See [`fsmi-and-public-policy.md`](fsmi-and-public-policy.md) for full details.
+
 ## Continuing programmes and projects
 
 - **Code4Change / DevSprints** — hands-on hackathons for upstream contributions to Swecha, Free Software and open-source projects. Source: [swecha.org/code4change](https://swecha.org/code4change)

@@ -11,6 +11,7 @@ This repository collects **publicly available information** about Swecha's histo
 - [`timeline/timeline.md`](timeline/timeline.md) — chronological narrative timeline (2002–2026)
 - [`timeline/timeline.json`](timeline/timeline.json) — machine-readable timeline data
 - [`timeline/sources.md`](timeline/sources.md) — source index and notes
+- [`timeline/fsmi-and-public-policy.md`](timeline/fsmi-and-public-policy.md) — Free Software Movement of India (FSMI) and public-policy advocacy
 - [`index.html`](index.html) — interactive web timeline (GitHub Pages)
 
 ## Sources
