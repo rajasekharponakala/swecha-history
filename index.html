@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swecha History — Timeline</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --accent: #22c55e;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      background: linear-gradient(135deg, #14532d, #0f172a);
+    }
+    header h1 { margin: 0; font-size: 2.2rem; }
+    header p { color: var(--muted); max-width: 720px; margin: 0.75rem auto 0; }
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 0.6rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--accent);
+    }
+    .event {
+      position: relative;
+      margin-bottom: 1.5rem;
+      background: var(--card);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      border-left: 3px solid var(--accent);
+    }
+    .event::before {
+      content: "";
+      position: absolute;
+      left: -1.55rem;
+      top: 1.2rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg);
+    }
+    .date { color: var(--accent); font-weight: 700; font-size: 0.95rem; }
+    .title { font-weight: 600; margin: 0.25rem 0; }
+    .desc { color: var(--muted); font-size: 0.9rem; }
+    .sources { margin-top: 0.5rem; font-size: 0.8rem; }
+    .sources a { color: #60a5fa; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+    .filter { margin-bottom: 1.5rem; }
+    .filter input {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      background: var(--card);
+      color: var(--text);
+      font-size: 1rem;
+    }
+    footer { text-align: center; color: var(--muted); padding: 2rem; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Swecha History</h1>
+    <p>A historical timeline of Swecha — a technology-for-society organisation committed to promoting Free and Open Source Software (FOSS). Built from publicly available information.</p>
+  </header>
+  <div class="container">
+    <div class="filter">
+      <input type="text" id="search" placeholder="Filter events by keyword, year, project..." />
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </div>
+  <footer>
+    Sources: swecha.org, code.swecha.org, viswam.ai, balaswecha.in, Wikipedia, DistroWatch, and others. See <a href="https://github.com/Swecha-Foundation/swecha-history" style="color:#60a5fa">repository</a>.
+  </footer>
+  <script>
+    const events = [
+      {"date":"2002","title":"Pre-history milestone (book release / Free Software global standards)","desc":"Swecha-history document surfaces a 2002 milestone; treat as pre-history rather than founding date.","sources":["https://www.scribd.com/document/816774415/swecha-stroy"]},
+      {"date":"2003","title":"Fonts and Unicode Telugu development","desc":"Alternative to proprietary (ANU) fonts; work with George Williams on Telugu support in pfaedit (FontForge).","sources":["https://www.scribd.com/document/816774415/swecha-stroy"]},
+      {"date":"2004","title":"Telugu in the digital world","desc":"First Telugu support for Pango rendering engine; GNOME with Telugu - birth of Swecha OS.","sources":["https://www.scribd.com/document/816774415/swecha-stroy"]},
+      {"date":"2005","title":"Swecha founded","desc":"Founded to support the Swecha project: Telugu localisation of GNU/Linux and Free Software.","sources":["https://swecha.org/about","https://en.wikipedia.org/wiki/Swecha"]},
+      {"date":"2005-02-08","title":"First Swecha test release","desc":"Released by AP Chief Minister Y. S. Rajasekhara Reddy in presence of Richard M. Stallman.","sources":["https://swecha.org/about"]},
+      {"date":"2005-2016","title":"Swecha OS / Telugu localisation as Live distribution","desc":"GNOME localised into Telugu, Telugu TTS, LiveCD; last listed version 2016.","sources":["https://swecha.org/content/swecha-project","https://distrowatch.com/swecha"]},
+      {"date":"undated","title":"BalaSwecha conceived","desc":"School-focused Free Software distro for elementary to tenth standard; 150+ apps, 100+ videos.","sources":["https://balaswecha.in/","https://en.wikipedia.org/wiki/Swecha"]},
+      {"date":"2007-07-03","title":"Swecha OS 07 release","desc":"Release per DistroWatch archive.","sources":["https://distrowatch.com/swecha"]},
+      {"date":"2008","title":"Summer camp, BalaSwecha ideation, E-Swecha beta","desc":"First 15-day summer camp for 570 students across 4 centres; BalaSwecha ideation; E-Swecha beta release.","sources":["https://www.scribd.com/document/816774415/swecha-stroy"]},
+      {"date":"2010","title":"NCAR 2010 and community growth","desc":"National Convention on Academics and Research; A. P. J. Abdul Kalam inaugurated.","sources":["https://swecha.org/content/camp-par-excellence","https://en.wikipedia.org/wiki/Swecha"]},
+      {"date":"2011-06-16","title":"15-day Industry Oriented Training / Summer Camp","desc":"CBIT and MGIT, Hyderabad; 435 students from ~100 colleges.","sources":["https://swecha.org/content/camp-par-excellence"]},
+      {"date":"2011-12-27","title":"Swecha OS 2012 release","desc":"Release per DistroWatch archive.","sources":["https://distrowatch.com/swecha"]},
+      {"date":"2012","title":"Swecha 3.0v release at TANA","desc":"36-hour sprint release.","sources":["https://www.scribd.com/document/816774415/swecha-stroy"]},
+      {"date":"2013","title":"BalaSwecha outreach","desc":"OS and educational intervention for Telugu-medium/government-school students.","sources":["https://en.wikipedia.org/wiki/Swecha"]},
+      {"date":"2013-2014","title":"E-Swecha collaborative OS","desc":"Built collaboratively by hundreds of Swecha volunteers/engineering students.","sources":["https://en.wikipedia.org/wiki/Swecha"]},
+      {"date":"2014-01-24","title":"International symposium on Free Internet & Free Software","desc":"Gachibowli, Hyderabad; 4,700+ participants.","sources":["https://en.wikipedia.org/wiki/Swecha"]},
+      {"date":"2014-03-09","title":"Freedom Fest","desc":"Guntur; ~1,500 students from 80 colleges.","sources":["https://en.wikipedia.org/wiki/Swecha"]},
+      {"date":"2014","title":"Large-scale recurring summer camps","desc":"15-day camps for 2,000+ students.","sources":["https://en.wikipedia.org/wiki/Swecha"]},
+      {"date":"2016-05-08","title":"Swecha / E-Swecha 2016 release","desc":"Ubuntu-based, Unity desktop.","sources":["https://distrowatch.com/swecha"]},
+      {"date":"2016","title":"TechDays 4.0","desc":"TechDays edition.","sources":["https://www.scribd.com/document/816774415/swecha-stroy"]},
+      {"date":"2023-04-15","title":"DevDays Hyderabad","desc":"React Query workshop and Android de-bloating.","sources":["https://swecha.org/devdays/past"]},
+      {"date":"2023-06-10","title":"DevDays Hyderabad","desc":"Vue.js, digital arts, Debian GNU/Linux packaging.","sources":["https://swecha.org/devdays/past"]},
+      {"date":"2023-06-11","title":"DevDays Hyderabad","desc":"Observability, Prometheus/Kubernetes, Dapr microservices.","sources":["https://swecha.org/devdays/past"]},
+      {"date":"2024-08-12","title":"Summer of AI / AI Creators Program announced","desc":"Two-week online programme for Telugu LLM, TTS, corpus.","sources":["https://swecha.org/summer-of-ai"]},
+      {"date":"2024-10","title":"Telugu AI Yatra begins","desc":"Across Telangana colleges; corpus collection.","sources":["https://swecha.org/ai-yatra"]},
+      {"date":"2024-11-23","title":"WomenWhoHack November 2024","desc":"Data engineering session, Hyderabad.","sources":["https://swecha.org/WomenWhoHack"]},
+      {"date":"2025-04-05","title":"DevDays Hyderabad AI/ML","desc":"Model Context Protocol and agentic AI.","sources":["https://events.swecha.org/DevDays/2025-devdayshyd-ai-5/"]},
+      {"date":"2025-2026","title":"VISWAM.ai and corpus infrastructure","desc":"Centre of Excellence on AI for the Global South; datasets, ASR, AI OS.","sources":["https://viswam.ai/","https://swecha.org/devsprints"]},
+      {"date":"2026-07-05","title":"DevSprints health-tech and Indic Corpus","desc":"Medical Camp system and Indic Corpus application.","sources":["https://swecha.org/devsprints"]},
+      {"date":"2026-08-15","title":"BuildAI4India Free DevDays Workshop","desc":"Free AI Workbench workshop, Gachibowli.","sources":["https://events.swecha.org/DevDays/2026-devdays-3/"]},
+      {"date":"2026","title":"VISWAM.ai Summer of AI","desc":"Undergraduate programme, certificates with IIIT Hyderabad and Meta.","sources":["https://viswam.ai/summer-of-ai"]},
+      {"date":"2026","title":"VISWAM.ai Grow phase","desc":"Roadmap grow phase for talent, products, startups, research institutes.","sources":["https://viswam.ai/"]}
+    ];
+    const container = document.getElementById('timeline');
+    const search = document.getElementById('search');
+    function render(filter) {
+      container.innerHTML = '';
+      const q = (filter || '').toLowerCase();
+      events.filter(e => !q || (e.date + ' ' + e.title + ' ' + e.desc).toLowerCase().includes(q))
+        .forEach(e => {
+          const div = document.createElement('div');
+          div.className = 'event';
+          div.innerHTML = `
+            <div class="date">${e.date}</div>
+            <div class="title">${e.title}</div>
+            <div class="desc">${e.desc}</div>
+            <div class="sources">${e.sources.map(s => `<a href="${s}" target="_blank" rel="noopener">${new URL(s).hostname}</a>`).join(' · ')}</div>
+          `;
+          container.appendChild(div);
+        });
+    }
+    render();
+    search.addEventListener('input', (ev) => render(ev.target.value));
+  </script>
+</body>
+</html>

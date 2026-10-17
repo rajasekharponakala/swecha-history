@@ -1,0 +1,53 @@
+{
+  "subject": "Swecha organisation (technology for society and Free Software), 2002-2026",
+  "as_of": "2026-10-17",
+  "organisation": {
+    "name": "Swecha",
+    "former_name": "Free Software Foundation, Andhra Pradesh (FSF-AP)",
+    "founded": 2005,
+    "headquarters": "Hyderabad",
+    "region": "Andhra Pradesh & Telangana",
+    "type": "Non-profit organisation",
+    "affiliation": "Free Software Movement of India (FSMI)",
+    "website": "https://swecha.org"
+  },
+  "timeline": [
+    {"date": "2002", "event": "Pre-history milestone (book release / Free Software global standards)", "description": "Swecha-history document surfaces a 2002 milestone; treat as pre-history rather than founding date.", "sources": ["https://www.scribd.com/document/816774415/swecha-stroy"]},
+    {"date": "2003", "event": "Fonts and Unicode Telugu development", "description": "Alternative to proprietary (ANU) fonts; work with George Williams on Telugu support in pfaedit (FontForge).", "sources": ["https://www.scribd.com/document/816774415/swecha-stroy"]},
+    {"date": "2004", "event": "Telugu in the digital world", "description": "First Telugu support for Pango rendering engine; GNOME with Telugu - birth of Swecha OS.", "sources": ["https://www.scribd.com/document/816774415/swecha-stroy"]},
+    {"date": "2005", "event": "Swecha founded", "description": "Founded to support the Swecha project: Telugu localisation of GNU/Linux and Free Software.", "sources": ["https://swecha.org/about", "https://en.wikipedia.org/wiki/Swecha"]},
+    {"date": "2005-02-08", "event": "First Swecha test release", "description": "Released by AP Chief Minister Y. S. Rajasekhara Reddy in presence of Richard M. Stallman.", "sources": ["https://swecha.org/about"]},
+    {"date": "2005-2016", "event": "Swecha OS / Telugu localisation as Live distribution", "description": "GNOME localised into Telugu, Telugu TTS, LiveCD; last listed version 2016.", "sources": ["https://swecha.org/content/swecha-project", "https://distrowatch.com/swecha"]},
+    {"date": "undated", "event": "BalaSwecha conceived", "description": "School-focused Free Software distro for elementary to tenth standard; 150+ apps, 100+ videos.", "sources": ["https://balaswecha.in/", "https://en.wikipedia.org/wiki/Swecha"]},
+    {"date": "2007-07-03", "event": "Swecha OS 07 release", "description": "Release per DistroWatch archive.", "sources": ["https://distrowatch.com/swecha"]},
+    {"date": "2008", "event": "Summer camp, BalaSwecha ideation, E-Swecha beta", "description": "First 15-day summer camp for 570 students across 4 centres; BalaSwecha ideation; E-Swecha beta release.", "sources": ["https://www.scribd.com/document/816774415/swecha-stroy"]},
+    {"date": "2010", "event": "NCAR 2010 and community growth", "description": "National Convention on Academics and Research; A. P. J. Abdul Kalam inaugurated.", "sources": ["https://swecha.org/content/camp-par-excellence", "https://en.wikipedia.org/wiki/Swecha"]},
+    {"date": "2011-06-16", "event": "15-day Industry Oriented Training / Summer Camp", "description": "CBIT and MGIT, Hyderabad; 435 students from ~100 colleges.", "sources": ["https://swecha.org/content/camp-par-excellence"]},
+    {"date": "2011-12-27", "event": "Swecha OS 2012 release", "description": "Release per DistroWatch archive.", "sources": ["https://distrowatch.com/swecha"]},
+    {"date": "2012", "event": "Swecha 3.0v release at TANA", "description": "36-hour sprint release.", "sources": ["https://www.scribd.com/document/816774415/swecha-stroy"]},
+    {"date": "2013", "event": "BalaSwecha outreach", "description": "OS and educational intervention for Telugu-medium/government-school students.", "sources": ["https://en.wikipedia.org/wiki/Swecha"]},
+    {"date": "2013-2014", "event": "E-Swecha collaborative OS", "description": "Built collaboratively by hundreds of Swecha volunteers/engineering students.", "sources": ["https://en.wikipedia.org/wiki/Swecha"]},
+    {"date": "2014-01-24", "event": "International symposium on Free Internet & Free Software", "description": "Gachibowli, Hyderabad; 4,700+ participants.", "sources": ["https://en.wikipedia.org/wiki/Swecha"]},
+    {"date": "2014-03-09", "event": "Freedom Fest", "description": "Guntur; ~1,500 students from 80 colleges.", "sources": ["https://en.wikipedia.org/wiki/Swecha"]},
+    {"date": "2014", "event": "Large-scale recurring summer camps", "description": "15-day camps for 2,000+ students.", "sources": ["https://en.wikipedia.org/wiki/Swecha"]},
+    {"date": "2016-05-08", "event": "Swecha / E-Swecha 2016 release", "description": "Ubuntu-based, Unity desktop.", "sources": ["https://distrowatch.com/swecha"]},
+    {"date": "2016", "event": "TechDays 4.0", "description": "TechDays edition.", "sources": ["https://www.scribd.com/document/816774415/swecha-stroy"]},
+    {"date": "2023-04-15", "event": "DevDays Hyderabad", "description": "React Query workshop and Android de-bloating.", "sources": ["https://swecha.org/devdays/past"]},
+    {"date": "2023-06-10", "event": "DevDays Hyderabad", "description": "Vue.js, digital arts, Debian GNU/Linux packaging.", "sources": ["https://swecha.org/devdays/past"]},
+    {"date": "2023-06-11", "event": "DevDays Hyderabad", "description": "Observability, Prometheus/Kubernetes, Dapr microservices.", "sources": ["https://swecha.org/devdays/past"]},
+    {"date": "2024-08-12", "event": "Summer of AI / AI Creators Program announced", "description": "Two-week online programme for Telugu LLM, TTS, corpus.", "sources": ["https://swecha.org/summer-of-ai"]},
+    {"date": "2024-10", "event": "Telugu AI Yatra begins", "description": "Across Telangana colleges; corpus collection.", "sources": ["https://swecha.org/ai-yatra"]},
+    {"date": "2024-11-23", "event": "WomenWhoHack November 2024", "description": "Data engineering session, Hyderabad.", "sources": ["https://swecha.org/WomenWhoHack"]},
+    {"date": "2025-04-05", "event": "DevDays Hyderabad AI/ML", "description": "Model Context Protocol and agentic AI.", "sources": ["https://events.swecha.org/DevDays/2025-devdayshyd-ai-5/"]},
+    {"date": "2025-2026", "event": "VISWAM.ai and corpus infrastructure", "description": "Centre of Excellence on AI for the Global South; datasets, ASR, AI OS.", "sources": ["https://viswam.ai/", "https://swecha.org/devsprints"]},
+    {"date": "2026-07-05", "event": "DevSprints health-tech and Indic Corpus", "description": "Medical Camp system and Indic Corpus application.", "sources": ["https://swecha.org/devsprints"]},
+    {"date": "2026-08-15", "event": "BuildAI4India Free DevDays Workshop", "description": "Free AI Workbench workshop, Gachibowli.", "sources": ["https://events.swecha.org/DevDays/2026-devdays-3/"]},
+    {"date": "2026", "event": "VISWAM.ai Summer of AI", "description": "Undergraduate programme, certificates with IIIT Hyderabad and Meta.", "sources": ["https://viswam.ai/summer-of-ai"]},
+    {"date": "2026", "event": "VISWAM.ai Grow phase", "description": "Roadmap grow phase for talent, products, startups, research institutes.", "sources": ["https://viswam.ai/"]}
+  ],
+  "continuing_programmes": [
+    {"name": "Code4Change / DevSprints", "description": "Hands-on hackathons for upstream contributions.", "source": "https://swecha.org/code4change"},
+    {"name": "Summer/Winter camps", "description": "30-day residential annual camp (Summer of Data).", "source": "https://swecha.org/summer-of-data"},
+    {"name": "Flagship portfolio", "description": "Swecha Voice, Medical Camp, FSMI Android distro, Agri/Edu/Health/Civic/Language/Assistive Tech.", "source": "https://swecha.org/projects"}
+  ]
+}
